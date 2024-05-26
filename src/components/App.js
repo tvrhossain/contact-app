@@ -16,15 +16,14 @@ export default function App() {
 
   const [contacts, setContacts] = useState([]);
 
-const contactHandler = (name, email) => {
-  
-  setContacts([...contacts, name, email])
-  console.log("NAME n EMAIL", contacts);
-};
+  const contactHandlerMain = (name, email) => {
+    setContacts([...contacts, { name, email }]);
+    console.log("NAME n EMAIL >>", email, name);
+  };
   return (
     <div className="w3-container w3-flat-turquoise">
       <Header />
-      <AddContact contactHandler={contactHandler} />
+      <AddContact contactHandler={contactHandlerMain} />
       <ContactList contacts={contacts} />
     </div>
   );

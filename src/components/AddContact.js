@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styles from "./AddContact.module.css";
 
 function AddContact({ contacts, contactHandler }) {
-  const [name, setName] = useState("BLANK");
-  const [email, setMail] = useState("GMAIL");
+  const [name, setName] = useState("JOHN");
+  const [email, setMail] = useState("test@gmail.com");
 
   const addContact = (e) => {
     e.preventDefault();
